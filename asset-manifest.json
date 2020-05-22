@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/jojo-portfolio/static/css/main.db51f312.chunk.css",
+    "main.js": "/jojo-portfolio/static/js/main.229231b1.chunk.js",
+    "main.js.map": "/jojo-portfolio/static/js/main.229231b1.chunk.js.map",
+    "runtime-main.js": "/jojo-portfolio/static/js/runtime-main.0635e7a5.js",
+    "runtime-main.js.map": "/jojo-portfolio/static/js/runtime-main.0635e7a5.js.map",
+    "static/js/2.b4af9475.chunk.js": "/jojo-portfolio/static/js/2.b4af9475.chunk.js",
+    "static/js/2.b4af9475.chunk.js.map": "/jojo-portfolio/static/js/2.b4af9475.chunk.js.map",
+    "index.html": "/jojo-portfolio/index.html",
+    "precache-manifest.61d18473655b032ebc1b135018da3e63.js": "/jojo-portfolio/precache-manifest.61d18473655b032ebc1b135018da3e63.js",
+    "service-worker.js": "/jojo-portfolio/service-worker.js",
+    "static/css/main.db51f312.chunk.css.map": "/jojo-portfolio/static/css/main.db51f312.chunk.css.map",
+    "static/js/2.b4af9475.chunk.js.LICENSE.txt": "/jojo-portfolio/static/js/2.b4af9475.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0635e7a5.js",
+    "static/js/2.b4af9475.chunk.js",
+    "static/css/main.db51f312.chunk.css",
+    "static/js/main.229231b1.chunk.js"
+  ]
+}
