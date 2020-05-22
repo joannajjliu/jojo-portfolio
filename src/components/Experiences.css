@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;600&display=swap');
+
+.timeline body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.timeline {
+    top: 0px;
+    position: relative;
+    margin: 50px auto;
+    /* max-width: 1000px; */
+    /* adding overflow auto such that block height follows content: */
+    /* overflow: auto; */
+}
+
+/* timeline middle grey line: */
+.timeline:before {
+    content: ' ';
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: #c5c5c5;
+    z-index: -1;
+}
+
+.timeline ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* maintain width at 50% to accomodate timeline line: */
+.timeline ul li {
+    list-style: none;
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+
+.timeline ul li:nth-child(odd) {
+    float: left;
+    text-align: right;
+    clear: both;
+}
+
+.timeline ul li:nth-child(even) {
+    float: right;
+    text-align: left;
+    clear: both;
+}
+
+.content {
+    padding-bottom: 20px;
+}
+
+/* colored timeline dots: */
+.timeline ul li:nth-child(odd) .timeline-icon{
+  position: absolute;
+  top: 20px;
+  right: -17px;
+  font-size: 30px;
+  color: #769fcd;
+  background-color: #fff;
+  padding: 3px 0 0;
+
+}
+
+.timeline ul li:nth-child(even) .timeline-icon {
+  position: absolute;
+  top: 20px;
+  left: -15px;
+  font-size: 30px;
+  color: #769fcd;
+  background-color: #fff;
+  padding: 3px 0 0;
+}
+
+/* timeline content : */
+.timeline ul li h5 {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: #769fcd;
+}
+
+.timeline ul li p {
+    margin: 10px 0 0; /* values: top horizontal bottom */
+    padding: 0;
+    font-size: 16px;
+}
+
+/* timeline time titles: */
+.timeline ul li .time h4 {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+.timeline ul li:nth-child(odd) .time {
+    position: absolute;
+    top: 18px;
+    right: -165px;
+    margin: 0;
+    padding: 8px 16px;
+    background: #769fcd;
+    color: #fff;
+    border-radius: 18px;
+}
+
+.timeline ul li:nth-child(even) .time {
+    position: absolute;
+    top: 20px;
+    left: -165px;
+    margin: 0;
+    padding: 8px 16px;
+    background: #769fcd;
+    color: #fff;
+    border-radius: 18px;
+}
+
+/* responsive timelines: */
+@media (max-width: 1000px) {
+    .timeline {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .timeline body {
+        height: 100vh;
+        padding-top: 200px;
+    }
+
+    .timeline {
+        width: 100%;
+        padding-bottom: 0;
+    }
+
+    /* timeline vertical line: */
+    .timeline:before {
+        left: 40px;
+        top: 50px;
+    }
+
+    .timeline ul li{
+        top: 100px;
+    }
+
+    /* timeline experience boxes: */
+    .timeline ul li:nth-child(odd),
+    .timeline ul li:nth-child(even) {
+        width: 100%;
+        text-align: left;
+        padding: 35px 90px 60px 90px;
+    }
+
+    /* timeline icons: */
+    .timeline ul li:nth-child(even) .timeline-icon,
+    .timeline ul li:nth-child(odd) .timeline-icon  {
+        top: -18px;
+        left: 26px;
+      }
+
+    /* timeline date blocks: */
+    .timeline ul li:nth-child(odd) .time,
+    .timeline ul li:nth-child(even) .time {
+        top: -20px;
+        left: 90px;
+        right: inherit;
+    }
+}

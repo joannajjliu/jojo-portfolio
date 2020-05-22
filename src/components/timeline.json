@@ -1,0 +1,40 @@
+{
+    "Timeline": [    
+        {   
+            "time": "Apr 2020",
+            "location": "Avanade",
+            "title": "Fullstack Developer",
+            "icon": "fa fa-briefcase"
+        },
+        {
+            "time": "Aug 2019",
+            "location": "Flight Centre - Umapped",
+            "title": "Frontend Web Developer - Contract",
+            "icon": "fa fa-briefcase"
+        },
+        {
+            "time": "2014 - 2019",
+            "location": "University of Waterloo",
+            "title": "BASc, Major in Chemical Engineering, Minor in Computer Science",
+            "icon": "fa fa-graduation-cap"
+        },
+        {
+            "time": "May 2018",
+            "location": "Toronto Transit Commission",
+            "title": "Business Analyst Assistant",
+            "icon": "fa fa-briefcase"
+        },
+        {
+            "time": "2015 - 2018",
+            "location": "University of Waterloo",
+            "title": "Orientation Media Leader (photography, video, graphics, social media)",
+            "icon": "fa fa-video-camera"
+        },
+        {
+            "time": "Sep 2015",
+            "location": "Toronto District School Board",
+            "title": "Web Graphic Design Assistant",
+            "icon": "fa fa-briefcase"
+        }
+    ]
+}
