@@ -5,7 +5,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'; //adds smooth scrollin
 // import $ from 'jquery';
 import { v4 as uuidv4 } from 'uuid';
 
-import { Experiences } from './components';
+import { Experiences, Contact } from './components';
 import data from './projects.json';
 
 function SinglePageNav() {
@@ -179,7 +179,7 @@ function App() {
         <SinglePageHome />
         <SinglePageProjects />
         <Experiences />
-        <TempContact />
+        <Contact />
         <Footer/>
       </div>
     </div>

@@ -12,7 +12,6 @@ export default class Contact extends React.Component {
     }
 
     onNameChange(e) {
-        console.log(e.target);
         this.setState({name: e.target.value})
     }
 
@@ -31,9 +30,10 @@ export default class Contact extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         console.log(this.state);
+        // console.log(window.location.href);
         axios({
             method: "POST",
-            url:`http://localhost:${process.env.PORT||3002}/send`,
+            url:'https://jjliu-portfolio-backend.herokuapp.com/send',
             data: this.state
         }).then((response) => {
             if (response.data.status === "success") {
@@ -49,6 +49,7 @@ export default class Contact extends React.Component {
         return (
             <section id="contact" className="contact-section">
                 <h1>Contact</h1>
+                {/* {console.log(`${window.location.href}send`)} */}
                 <form id="contact-form" 
                     onSubmit={this.handleSubmit.bind(this)} 
                     method="POST"
