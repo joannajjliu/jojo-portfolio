@@ -149,7 +149,7 @@ function TempContact() {
 function Footer() {
   return (
     <div className="text-center">
-      {/* <p>
+      <p>
         <a 
           href="https://github.com/joannajjliu" 
           rel="noopener noreferrer" 
@@ -165,7 +165,7 @@ function Footer() {
         <a href="mailto:joanna_liu@live.ca" rel="noopener noreferrer" target="_blank">
           <i className="fa fa-envelope footer-logo" aria-hidden="true"></i>
         </a>
-      </p> */}
+      </p>
       <h4>&copy; 2020 Jojo</h4>
     </div>
   );
