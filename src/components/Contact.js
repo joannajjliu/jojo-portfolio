@@ -47,65 +47,70 @@ export default class Contact extends React.Component {
 
     render() {
         return (
-            <section id="contact" className="contact-section">
-                <h1>Contact</h1>
-                {/* {console.log(`${window.location.href}send`)} */}
-                <form id="contact-form" 
-                    onSubmit={this.handleSubmit.bind(this)} 
-                    method="POST"
-                >
-                    <div className="form-group">
-                        <label className="contact-label" htmlFor="myName">
-                            <span className="required">*</span> Name
-                        </label>
-                        <input 
-                            autoComplete="on"
-                            name="myName"
-                            className="form-control"
-                            id="myName"
-                            onChange={this.onNameChange.bind(this)}
-                            required
-                            type="text" 
-                            value={this.state.name}
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label className="contact-label" htmlFor="myEmail">
-                            <span className="required">*</span> 
-                            Email address
-                        </label>
-                        <input 
-                            name="myEmail"
-                            autoComplete="on"
-                            className="form-control" 
-                            id="myEmail"
-                            onChange={this.onEmailChange.bind(this)}
-                            required
-                            type="email" 
-                            value={this.state.email}
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label className="contact-label" htmlFor="message"><span className="required">*</span> Message</label>
-                        <textarea 
-                            className="form-control" 
-                            id="message"
-                            onChange={this.onMessageChange.bind(this)}
-                            required
-                            rows="5"
-                            value={this.state.message}
-                        >    
-                        </textarea>
-                    </div>
-                    <button 
-                        type="submit" 
-                        className="contact-button card-body"
-                        disabled={this.state.name === '' || this.state.email === '' || this.state.message === ''}
-                    >
-                        Submit
-                    </button>
-                </form>
-            </section>
+          <section id="contact" className="contact-section">
+            <h1>Contact</h1>
+            <form
+              id="contact-form"
+              onSubmit={this.handleSubmit.bind(this)}
+              method="POST"
+            >
+              <div className="form-group">
+                <label className="contact-label" htmlFor="myName">
+                  <span className="required">*</span> Name
+                </label>
+                <input
+                  autoComplete="on"
+                  name="myName"
+                  className="form-control"
+                  id="myName"
+                  onChange={this.onNameChange.bind(this)}
+                  required
+                  type="text"
+                  value={this.state.name}
+                />
+              </div>
+              <div className="form-group">
+                <label className="contact-label" htmlFor="myEmail">
+                  <span className="required">*</span>
+                  Email address
+                </label>
+                <input
+                  name="myEmail"
+                  autoComplete="on"
+                  className="form-control"
+                  id="myEmail"
+                  onChange={this.onEmailChange.bind(this)}
+                  required
+                  type="email"
+                  value={this.state.email}
+                />
+              </div>
+              <div className="form-group">
+                <label className="contact-label" htmlFor="message">
+                  <span className="required">*</span> Message
+                </label>
+                <textarea
+                  className="form-control"
+                  id="message"
+                  onChange={this.onMessageChange.bind(this)}
+                  required
+                  rows="5"
+                  value={this.state.message}
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                className="contact-button card-body"
+                disabled={
+                  this.state.name === "" ||
+                  this.state.email === "" ||
+                  this.state.message === ""
+                }
+              >
+                Submit
+              </button>
+            </form>
+          </section>
         );
     }
 }
