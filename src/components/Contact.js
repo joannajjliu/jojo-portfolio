@@ -30,19 +30,19 @@ export default class Contact extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         console.log(this.state);
-        // console.log(window.location.href);
         axios({
-            method: "POST",
-            url:'https://jjliu-portfolio-backend.herokuapp.com/send',
-            data: this.state
+          method: "POST",
+          url: "https://jojoliu-backend-v2.herokuapp.com/send",
+        //   url: "http://localhost:3002/send",
+          data: this.state,
         }).then((response) => {
-            if (response.data.status === "success") {
-                alert("Message sent.");
-                this.resetForm();
-            } else {
-                alert("Message failed to send:", response.data.status);
-            }
-        })
+          if (response.data.status === "success") {
+            alert("Message sent.");
+            this.resetForm();
+          } else {
+            alert("Message failed to send:", response.data.status);
+          }
+        });
     }
 
     render() {
@@ -55,37 +55,45 @@ export default class Contact extends React.Component {
                     method="POST"
                 >
                     <div className="form-group">
-                        <label className="contact-label" htmlFor="name"><span className="required">*</span> Name</label>
+                        <label className="contact-label" htmlFor="myName">
+                            <span className="required">*</span> Name
+                        </label>
                         <input 
-                            type="text" 
+                            autoComplete="on"
+                            name="myName"
                             className="form-control"
-                            id="name"
-                            value={this.state.name}
+                            id="myName"
                             onChange={this.onNameChange.bind(this)}
                             required
+                            type="text" 
+                            value={this.state.name}
                         />
                     </div>
                     <div className="form-group">
-                        <label className="contact-label" htmlFor="exampleInputEmail1"><span className="required">*</span> Email address</label>
+                        <label className="contact-label" htmlFor="myEmail">
+                            <span className="required">*</span> 
+                            Email address
+                        </label>
                         <input 
-                            type="email" 
+                            name="myEmail"
+                            autoComplete="on"
                             className="form-control" 
-                            aria-describedby="emailHelp"
-                            id="email"
-                            value={this.state.email}
+                            id="myEmail"
                             onChange={this.onEmailChange.bind(this)}
                             required
+                            type="email" 
+                            value={this.state.email}
                         />
                     </div>
                     <div className="form-group">
                         <label className="contact-label" htmlFor="message"><span className="required">*</span> Message</label>
                         <textarea 
                             className="form-control" 
-                            rows="5"
                             id="message"
-                            value={this.state.message}
                             onChange={this.onMessageChange.bind(this)}
                             required
+                            rows="5"
+                            value={this.state.message}
                         >    
                         </textarea>
                     </div>
